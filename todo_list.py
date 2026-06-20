@@ -9,17 +9,14 @@ def addTask():
         mytasks.append(task)
         return
 def viewtasks():
-      count=1
-      for tasks in mytasks:
-            print(count,tasks)
-            count+=1
-
+      for count, tasks in enumerate(mytasks, start=1):
+            print(count, tasks)
 
 def main():
       print("To Do list:")
       while True:
             showMenu()
-            choice=input("enter your choice 1-3")     
+            choice=input("enter your choice 1-3:")     
             if choice=="1":
                   addTask()
             elif choice=="2":
